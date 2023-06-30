@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  --mon-font: "Montserrat";
+  --fra-font: "Fraunces";
+  --margin-butt: 20px
+}
+body {
+  background-color: var(--Cream);
+  height: 100vh;
+  display: flex;
+  padding: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: var(--White);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-bottom: var(--margin-butt);
+}
+@media (min-width: 376px) {
+  .container {
+    flex-direction: row;
+    width: 35%;
+    min-width: 35%;
+
+  }
+}
+.container .img {
+  background-image: url(/images/image-product-mobile.jpg);
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit
+}
+@media (min-width: 376px)  {
+  .container .img {
+    background-image: url(/images/image-product-desktop.jpg);
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit
+  }
+}
+.container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 25px;
+}
+@media (min-width: 376px) {
+  .container .content {
+    width: 50%;
+  }
+}
+.container .content p {
+  color: var(--Dark-grayish-blue);
+  font-family: var(--mon-font);
+  font-size: 14px;
+  margin-bottom: var(--margin-butt)
+}
+.container .content p:first-child {
+  letter-spacing: 5px;
+  text-transform: uppercase
+}
+.container .content h2 {
+  font-size: 30px;
+  color: var(--Very-dark-blue);
+  margin-bottom: 20px;
+  font-family: var(--fra-font);
+  margin-bottom: var(--margin-butt)
+}
+.container .content .price {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--margin-butt);
+}
+.container .content .price h3 {
+  font-size: 30px;
+  font-family: var(--fra-font);
+  color: var(--Dark-cyan);
+  margin-right: 20px;
+}
+.container .content .price del {
+  color: var(--Dark-grayish-blue);
+  font-family: var(--mon-font);
+}
+.container .content button {
+  width: 100%;
+  height: 50px;
+  background-color: var(--Dark-cyan);
+  border: none;
+  color: var(--Cream);
+  font-size: 18px;
+  font-family: var(--mon-font);
+  font-weight: 700;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
